@@ -18,14 +18,14 @@ def parse_csv_and_get_columns(filename, error_type):
         val = line.split(",")
         if error_type == 0:
             try:
-                test_str_div = val[0] / val[11]
+                test_str_div = val[0] / val[10]
                 print(test_str_div)
             except TypeError:
                 raise DataNotValidException
                 pass
         if error_type == 1:
             try:
-                test_zero_div = (int(val[0]) / int(val[11]))
+                test_zero_div = (int(val[0]) / int(val[10]))
                 print(test_zero_div)
             except ZeroDivisionError:
                 raise MyZeroDivisionException
